@@ -10,19 +10,23 @@ def menu():
     print('0- Sair do programa')
 
 def somar():
-    num1 = int(input('Primeiro número: '))
-    num2 = int(input('Segundo número: '))
+    num1 = float(input('Primeiro número: '))
+    num2 = float(input('Segundo número: '))
     soma = num1 + num2
-    return f'O resultado da soma entre os números {num1} e {num2} é {soma}.'
+    return f'O resultado da soma entre os números {num1} e {num2} é {soma:.2f}.'
 
 def subtrair():
-    num1 = int(input('Primeiro número: '))
-    num2 = int(input('Segundo número: '))
+    num1 = float(input('Primeiro número: '))
+    num2 = float(input('Segundo número: '))
     sub = num1 - num2
-    return f'O resultado da subtração é {sub}'
+    return f'O resultado da subtração é {sub:.2f}'
 
 def dividir():
-    print('Ainda vou fazer!')
+    num1 = float(input('Número que vai ser dividido'))
+    num2 = float(input('Segundo número: '))
+    result = num1 / num2
+    return f'O resultado da divisão de {num1} por {num2} é {result:.2f}'
+
 
 def multiplicar():
     print('Ainda vou fazer!')
@@ -41,7 +45,7 @@ while True:
     elif op == 2:
         print(subtrair())
     elif op == 3:
-        dividir()
+        print(dividir())
     elif op == 4:
         multiplicar()
     elif op == 5:
