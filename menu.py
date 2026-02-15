@@ -10,10 +10,16 @@ def menu():
     print('0- Sair do programa')
 
 def somar():
-    print('Ainda vou fazer!')
+    num1 = int(input('Primeiro número: '))
+    num2 = int(input('Segundo número: '))
+    soma = num1 + num2
+    return f'O resultado da soma entre os números {num1} e {num2} é {soma}.'
 
 def subtrair():
-    print('Ainda vou fazer!')
+    num1 = int(input('Primeiro número: '))
+    num2 = int(input('Segundo número: '))
+    sub = num1 - num2
+    return f'O resultado da subtração é {sub}'
 
 def dividir():
     print('Ainda vou fazer!')
@@ -31,9 +37,9 @@ while True:
     menu()
     op = int(input('Escolha: '))
     if op == 1:
-        somar()
+        print(somar())
     elif op == 2:
-        subtrair()
+        print(subtrair())
     elif op == 3:
         dividir()
     elif op == 4:
