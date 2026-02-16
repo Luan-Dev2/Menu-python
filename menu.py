@@ -37,10 +37,16 @@ def multiplicar():
     return f'O resultado da multiplicação é {result:.2f}.'
 
 def descontoProduto():
-    print('Ainda vou fazer!')
+    valorProduto = float(input('Digite o valor do produto: R$'))
+    valorDesconto = int(input('Digite a porcentagem do desconto: '))
+    produtoDesconto = valorProduto - (valorProduto * valorDesconto/100)
+    return f'O produto que era R${valorProduto} passa a ser R${produtoDesconto:.2f} com o desconto de {valorDesconto}%.'
 
 def aumentoSalarial():
-    print('Ainda vou fazer!')
+    valorSalario = float(input('Valor do salário do(a) funcionário(a): R$'))
+    valorAumento = int(input('Valor da porcentagem do aumento: '))
+    salarioNovo = valorSalario + (valorSalario * valorAumento/100)
+    return f'O salário do(a) funcionário(a) passa a ser R${salarioNovo:.2f} com {valorAumento:.2f} de aumento.'
 
 while True:
     menu()
@@ -55,9 +61,9 @@ while True:
     elif op == 4:
         print(multiplicar())
     elif op == 5:
-        descontoProduto()
+        print(descontoProduto())
     elif op == 6:
-        aumentoSalarial()
+        print(aumentoSalarial())
     elif op == 0:
         print(f'Saindo...')
         sleep(3)
